@@ -7,8 +7,19 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+
+
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -19,11 +30,60 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+    <nav id="nav-bar">
+      <div id="logo-box">
+        <span>Tweeter</span>
+      </div>
+      <div id="composeButton"> 
+        <span>Write a Tweet</span>
+        <span id="arrows"><i class="fas fa-angle-double-down"></i></span>
+      </div>  
     </nav>
 
+    <!-- Avatar and Name -->
+    <div>
+    <header id="avatar-name-box">
+      <div id="avatar-image">
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <div id="user-name">
+          <h2>Amit Baid</h2>
+      </div>
+  </header>
+  </div>
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+
+      <!-- Posted tweets displayed-->
+      <section class="tweets">
+        <article>
+          <header>
+            <h2>
+              <img src="images/face.png" alt="Icon face"> Amit
+            </h2>
+           <span>@amitbaid</span>
+          </header>
+          <p>Test tweet text. Yaaaaaaaaaa!</p>
+          <hr size="8" width="90%" color="black"> 
+          <footer>
+            <span>10 days ago</span>
+            <span class="icons"><i class="fas fa-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></span>
+          </footer>
+        </article>
+      </section>
+    </main>
   </body>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </html>

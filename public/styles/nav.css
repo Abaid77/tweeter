@@ -1,0 +1,28 @@
+#nav-bar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  height: 120px;
+  width: 100%;
+  background-color:  #4056A1;
+  color: #FFFFFF; 
+  justify-content: space-between;
+  padding: 1.5em;
+}
+
+#composeButton {
+  display: flex;
+  flex-direction: column;
+}
+
+#arrows {
+  align-self: center
+}
+
+nav span {
+  font-family: Bungee;
+}
+
+i {
+  color: red;
+}
