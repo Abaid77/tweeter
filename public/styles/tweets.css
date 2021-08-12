@@ -7,6 +7,8 @@ article {
   
 }
 
+/* Hover for tweet box */
+
 article:hover {
   box-shadow: 5px 10px;
 }
@@ -53,6 +55,8 @@ article > footer > span {
   float: right;
   
  }
+
+ /* Hover for Icons */
 
  .fa-heart {color:#4056A1;}
  .fa-heart:hover {color:#817506;}

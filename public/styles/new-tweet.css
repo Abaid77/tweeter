@@ -7,18 +7,17 @@
 }
 
 
-/*
-* Additional CSS to style the title
-*/
+
+ /* CSS to style the title */
+
 
 .new-tweet > h2 {
 border-bottom: 2px solid;
 margin-top: 15px;
 }
 
-/*
-* Additional CSS to style the form
-*/
+
+/* CSS to style the form */
 
 .new-tweet > form {
 display: block;
@@ -33,6 +32,7 @@ textarea {
 width: 100%;
 height: 90px;
 padding: 5px;
+
 }
 
 .counter {
@@ -47,8 +47,28 @@ button {
   border: 0;
 }
 
+/* Turn font red when counter is negative */
+
 .fontRed {
   color: red;
+}
+
+.error-message-off {
+  display: none;
+}
+
+.error-message-on {
+  font-family: FontAwesome;
+  padding: 3px;
+  display: flex;
+  height: 30px;
+  background-color: #fee;
+  border: 2px solid red;
+  color: #c33;
+  margin-top: 1px;
+  margin-bottom: 3px;
+  font-size: .7em;
+  justify-content: center;
 }
 
 

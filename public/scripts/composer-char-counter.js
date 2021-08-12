@@ -1,13 +1,12 @@
 $(document).ready(function() {
   $(".new-tweet").on( "input", "textarea" , function(event) {
     //get the value of textarea and calculate the remaining characters.
-    let $text = $(this).val();
-    let $charsRemaining = 140 - $text.length;
-    console.log("test")
+    const $text = $(this).val();
+    const $charsRemaining = 140 - $text.length;
 
     //go back up the dom to change the text on the counter
     
-    $counter = $(this).closest("form").find(".counter")
+    const $counter = $(this).closest("form").find(".counter")
     $counter.text($charsRemaining);
 
     //turn the counter red when negative number
