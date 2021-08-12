@@ -54,10 +54,6 @@ button {
 }
 
 .error-message-off {
-  display: none;
-}
-
-.error-message-on {
   font-family: FontAwesome;
   padding: 3px;
   display: flex;
@@ -69,6 +65,21 @@ button {
   margin-bottom: 3px;
   font-size: .7em;
   justify-content: center;
+  display: none;
 }
+
+/* .error-message-on {
+  font-family: FontAwesome;
+  padding: 3px;
+  display: flex;
+  height: 30px;
+  background-color: #fee;
+  border: 2px solid red;
+  color: #c33;
+  margin-top: 1px;
+  margin-bottom: 3px;
+  font-size: .7em;
+  justify-content: center;
+} */
 
 

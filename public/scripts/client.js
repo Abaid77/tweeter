@@ -88,24 +88,24 @@ $(document).ready(function() {
 
     const $errorMessage = $(this).closest("form").find(".error-message-off");
 
+    // Reset error message text if needed
+
+    $errorMessage.text("").slideUp("slow")
+
     // Checks for blanks or to many characters if none serialize data and submit
-
+    
     if ($text.val() === "" || $text.val() === null) {
-      $($errorMessage).removeClass("error-message-off").addClass("error-message-on");
-
-      $errorMessage.text("Your message is empty!").toggle(true);
+      $errorMessage.text("Your message is empty!").slideDown("slow");
       $text.focus();
     } else if ($textLength > 140) {
-      $($errorMessage).removeClass("error-message-off").addClass("error-message-on");
-      $errorMessage.text("Your message is to long!").toggle(true);
+      $errorMessage.text(`Your message is to long!`).slideDown("slow");
       $text.focus();
     } else {
       //Post data and loadTweets
       $.post('/tweets', serializedData).then(loadTweets);
 
-      //Hide Error message if needed, clear textarea, reset counter
-      const $errorMessageOff = $(this).closest("form").find(".error-message-on");
-      $($errorMessageOff).removeClass("error-message-on").addClass("error-message-off");
+      // clear textarea, reset counter
+      
       $text.val("").focus();
       $counter.text("140");
     }
