@@ -117,12 +117,35 @@ $(document).ready(function() {
     
   });
 
-  //Have the comepose button make the new-tweet toggle between hidden and shown
+  //Have the comepose button make the new-tweet toggle between hidden and shown. Reset focus to textarea
 
   const $compose = $('#composeButton');
   
   $compose.on('click', function (event) {
      $(".new-tweet").slideToggle("slow")
+     $(".new-tweet").find("textarea").focus();
   })
+
+  // Function to check for scrolling and show button to allow user to go back to top
+
+  
+});
+
+$(function () {
+  $(function () {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() - 200 > 0) {
+            $('#to-top').stop().slideDown('fast'); // show the button
+        } else {
+            $('#to-top').stop().slideUp('fast'); // hide the button
+        }
+    });
+
+  $("#to-top").on("click", function () {
+      $("html, body").animate({
+          scrollTop: 0
+      }, 200);
+  });
+});
 
 });
