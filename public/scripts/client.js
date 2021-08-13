@@ -117,4 +117,12 @@ $(document).ready(function() {
     
   });
 
+  //Have the comepose button make the new-tweet toggle between hidden and shown
+
+  const $compose = $('#composeButton');
+  
+  $compose.on('click', function (event) {
+     $(".new-tweet").slideToggle("slow")
+  })
+
 });
