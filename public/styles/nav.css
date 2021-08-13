@@ -6,7 +6,9 @@
   top: 0;
   height: 120px;
   width: 100%;
-  background-color:  #4056A1;
+  background-color: #bb8103de;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  /* background-color:  #074885; */
   color: #FFFFFF; 
   justify-content: space-between;
   padding: 1.5em;
@@ -25,6 +27,17 @@ nav span {
   font-family: Bungee;
 }
 
+#composeButton > span {
+  font-size: .7em;
+}
+
 i {
   color: red;
+}
+
+@media only screen and (min-width: 768px) {
+  #nav-bar {
+    background-image: none;
+    background-color: #074885 ;
+  }
 }

@@ -6,6 +6,10 @@
 
 $(document).ready(function() {
 
+  // Puts focus onto text area upon load
+
+  $(".new-tweet").find("textarea").focus();
+
   const loadTweets = () => {
     $.ajax({
       url: '/tweets',
