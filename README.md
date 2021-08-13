@@ -4,7 +4,7 @@ Tweeter is a simple, single-page Twitter clone completed by Amit Baid.
 
 This repository was created using starter code from Lighthouse Labs. I have cloned there starter repository and used it to practice HTML, CSS, jQuery and AJAX front end skills, and my Node, Express and MongoDB back-end skills.
 
-### Changes Made
+## Changes Made
 
 From the starter repository I have added the following display functionality:
 - Ensured that the app is a client-side Single Page App (SPA)
@@ -30,6 +30,8 @@ From the starter repository I have added the following display functionality:
   - footer, which displays:
     - how long ago the tweet was created, on the left
     - "Flag", "Re-tweet" and "Like" action icons on the right
+- Responsive Design that:
+  - scales for mobile/tablet/desktop using CSS and media query
 
 I have also added the following behaviour:
 - Individual Tweets
@@ -52,6 +54,8 @@ I have also added the following behaviour:
   - Second Toggle Button
     - When a user scrolls a second button appears in the lower right hand corner:
       - if the user clicks this button they are brought back up to the top of the page
+
+    
 
 
 ## Getting Started
