@@ -55,6 +55,20 @@ I have also added the following behaviour:
     - When a user scrolls a second button appears in the lower right hand corner:
       - if the user clicks this button they are brought back up to the top of the page
 
+## Screenshots
+
+!["Screenshot of character counter"](https://github.com/Abaid77/tweeter/blob/master/docs/character-counter.png?raw=true)
+###### Screenshot of character counter in action
+
+!["Screenshot of desktop size view with new-tweet hidden"](https://github.com/Abaid77/tweeter/blob/master/docs/desktop-size.png?raw=true)
+###### Screenshot of desktop size view with new-tweet hidden  
+
+!["Screenshot of tablet size view with error message shown"](https://github.com/Abaid77/tweeter/blob/master/docs/tablet-size.png?raw=true)
+###### Screenshot of tablet size view with error message shown
+
+!["Screenshot of mobile sized view"](https://github.com/Abaid77/tweeter/blob/master/docs/mobile-size.png?raw=true)
+###### Screenshot of mobile sized view
+
     
 
 
