@@ -10,6 +10,8 @@ $(document).ready(function() {
 
   $(".new-tweet").find("textarea").focus();
 
+  // Function to lead tweets from database
+
   const loadTweets = () => {
     $.ajax({
       url: '/tweets',
@@ -23,32 +25,39 @@ $(document).ready(function() {
       }
     });
   };
+
+  // Load tweets upon page load
+
   loadTweets();
+
+  // Function for rendering tweets
 
   const renderTweets = function(tweets) {
 
     const $tweetContainer = $('.tweets');
     $tweetContainer.empty();
     
-    // loops through tweets
+    // Loops through tweets
     for (const tweet of tweets) {
       
-      // calls createTweetElement for each tweet
+      // Calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
       
-      // takes return value and appends it to the tweets container
+      // Takes return value and appends it to the tweets container
       $(".tweets").prepend($tweet);
     }
   };
 
   const createTweetElement = (tweet) => {
     
-    // function for escaping text
+    // Function for escaping text
     const escape = function(str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
     };
+
+    // Create the tweet HTML to add to DOM
 
     const tweetCreated = timeago.format(tweet.created_at);
     const $tweet = (`
@@ -74,13 +83,13 @@ $(document).ready(function() {
   const $form = $('#tweet-composer');
   $form.on('submit', function(event) {
     
-    //remove browser defualt behaviour
+    // Remove browser defualt behaviour
     event.preventDefault();
 
-    // serialize the data
+    // Serialize the data
     const serializedData = $(this).serialize();
 
-    //Get data from textarea
+    // Get data from textarea
     const $text = $(this).closest("form").find("textarea");
     const $textLength = $text.val().length;
 
@@ -105,10 +114,12 @@ $(document).ready(function() {
       $errorMessage.text(`Your message is to long!`).slideDown("slow");
       $text.focus();
     } else {
-      //Post data and loadTweets
+
+      // Post data and loadTweets
+
       $.post('/tweets', serializedData).then(loadTweets);
 
-      // clear textarea, reset counter
+      // Clear textarea, reset counter
       
       $text.val("").focus();
       $counter.text("140");
@@ -117,7 +128,7 @@ $(document).ready(function() {
     
   });
 
-  //Have the comepose button make the new-tweet toggle between hidden and shown. Reset focus to textarea
+  //Have the compose button make the new-tweet toggle between hidden and shown. Reset focus to textarea
 
   const $compose = $('#composeButton');
   
@@ -135,9 +146,9 @@ $(function() {
   $(function() {
     $(window).scroll(function() {
       if ($(this).scrollTop() - 200 > 0) {
-        $('#to-top').stop().slideDown('fast'); // show the button
+        $('#to-top').stop().slideDown('fast'); // Show the button
       } else {
-        $('#to-top').stop().slideUp('fast'); // hide the button
+        $('#to-top').stop().slideUp('fast'); // Hide the button
       }
     });
 
