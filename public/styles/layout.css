@@ -32,6 +32,8 @@ main {
   
 }
 
+/* Styling to to-top button */
+
 #to-top {
   position: fixed;
   right: 20px;
@@ -44,6 +46,8 @@ main {
   size: 20px;
   display: none;
 }
+
+/* Responsive Design */
 
 @media only screen and (min-width: 1024px) {
   .header {
@@ -62,12 +66,5 @@ main {
     display: flex;
     align-items: flex-start 
   }
-
-
-
- 
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

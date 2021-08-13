@@ -37,14 +37,14 @@ $(document).ready(function() {
       const $tweet = createTweetElement(tweet);
       
       // takes return value and appends it to the tweets container
-      $(".tweets").prepend($tweet)
+      $(".tweets").prepend($tweet);
     }
-  }
+  };
 
   const createTweetElement = (tweet) => {
     
     // function for escaping text
-    const escape = function (str) {
+    const escape = function(str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
@@ -65,14 +65,14 @@ $(document).ready(function() {
           <span>${tweetCreated}</span>
           <span class="icons"><i class="fas fa-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></span>
         </footer>
-      </article>`)
+      </article>`);
     return $tweet;
-  }
+  };
 
   // Event Handler for Form Submit
 
   const $form = $('#tweet-composer');
-  $form.on('submit', function (event) {
+  $form.on('submit', function(event) {
     
     //remove browser defualt behaviour
     event.preventDefault();
@@ -82,11 +82,11 @@ $(document).ready(function() {
 
     //Get data from textarea
     const $text = $(this).closest("form").find("textarea");
-    const $textLength = $text.val().length
+    const $textLength = $text.val().length;
 
     // Data for reseting the counter
 
-    const $counter = $(this).closest("form").find(".counter")
+    const $counter = $(this).closest("form").find(".counter");
     
     //Get data for error message
 
@@ -94,7 +94,7 @@ $(document).ready(function() {
 
     // Reset error message text if needed
 
-    $errorMessage.text("").slideUp("slow")
+    $errorMessage.text("").slideUp("slow");
 
     // Checks for blanks or to many characters if none serialize data and submit
     
@@ -121,31 +121,31 @@ $(document).ready(function() {
 
   const $compose = $('#composeButton');
   
-  $compose.on('click', function (event) {
-     $(".new-tweet").slideToggle("slow")
-     $(".new-tweet").find("textarea").focus();
-  })
+  $compose.on('click', function() {
+    $(".new-tweet").slideToggle("slow");
+    $(".new-tweet").find("textarea").focus();
+  });
 
   // Function to check for scrolling and show button to allow user to go back to top
 
   
 });
 
-$(function () {
-  $(function () {
+$(function() {
+  $(function() {
     $(window).scroll(function() {
-        if ($(this).scrollTop() - 200 > 0) {
-            $('#to-top').stop().slideDown('fast'); // show the button
-        } else {
-            $('#to-top').stop().slideUp('fast'); // hide the button
-        }
+      if ($(this).scrollTop() - 200 > 0) {
+        $('#to-top').stop().slideDown('fast'); // show the button
+      } else {
+        $('#to-top').stop().slideUp('fast'); // hide the button
+      }
     });
 
-  $("#to-top").on("click", function () {
+    $("#to-top").on("click", function () {
       $("html, body").animate({
-          scrollTop: 0
+        scrollTop: 0
       }, 200);
+    });
   });
-});
 
 });

@@ -1,21 +1,16 @@
 .new-tweet {
   margin: 2em;
-  /* border: 1px solid #e3e3e3; */
   border-radius: 4px;
   padding: 0px 8px 40px 8px;
   background-color: #f4f1ec;
 }
 
-
-
- /* CSS to style the title */
-
+/* CSS to style the title */
 
 .new-tweet > h2 {
 border-bottom: 2px solid;
 margin-top: 15px;
 }
-
 
 /* CSS to style the form */
 
@@ -34,7 +29,6 @@ height: 90px;
 padding: 5px;
 border: none;
 background-color: #f4f1ec;
-
 }
 
 .counter {
@@ -55,6 +49,8 @@ button {
   color: red;
 }
 
+/* Error message styling */
+
 .error-message-off {
   font-family: FontAwesome;
   padding: 3px;
@@ -70,18 +66,6 @@ button {
   display: none;
 }
 
-/* .error-message-on {
-  font-family: FontAwesome;
-  padding: 3px;
-  display: flex;
-  height: 30px;
-  background-color: #fee;
-  border: 2px solid red;
-  color: #c33;
-  margin-top: 1px;
-  margin-bottom: 3px;
-  font-size: .7em;
-  justify-content: center;
-} */
+
 
 

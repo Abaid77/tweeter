@@ -34,6 +34,8 @@ i {
   color: red;
 }
 
+/* Responsive Design */
+
 @media only screen and (min-width: 768px) {
   #nav-bar {
     background-image: none;
